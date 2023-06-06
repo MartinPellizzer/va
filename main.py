@@ -65,7 +65,7 @@ def alert():
 
 
 times = [
-	[14, 00, 0],
+	[14, 2, 0],
 	[14, 30, 0],
 	[17, 00, 0],
 	[17, 30, 0],
@@ -80,7 +80,11 @@ while True:
 	if (hour == 13 or hour == 14 or hour == 15 or hour == 16 or hour == 17) and minute == 56:
 		training()
 
-	if (hour == 8 or hour == 11) and (minute == 30 or minute == 00):
+	if (hour == 8 or hour == 11) and (minute == 30 or minute == 0):
+		alert()
+
+	if (hour == 14 or hour == 17) and (minute == 30 or minute == 0):
+		twitter()
 		alert()
 
 	continue
